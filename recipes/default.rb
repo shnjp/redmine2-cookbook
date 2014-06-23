@@ -99,7 +99,7 @@ template "#{node[:redmine][:home]}/redmine-#{node[:redmine][:version]}/Gemfile.l
 end
 
 bundle_command = "#{node[:redmine][:home]}/.rbenv/shims/bundle"
-rake_command = "#{node[:redmine][:home]}/.rbenv/shims/rake"
+rake_command = "#{node[:redmine][:home]}/.rbenv/shims/bundle exec rake"
 bundle_install_command = case node[:redmine][:db][:type]
   when 'sqlite'
     "#{bundle_command} install --without development test mysql postgresql rmagick"

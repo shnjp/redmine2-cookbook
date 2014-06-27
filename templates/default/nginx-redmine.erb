@@ -10,6 +10,8 @@ server {
   access_log  /var/log/nginx/redmine.access.log;
   error_log  /var/log/nginx/redmine.error.log;
 
+  client_max_body_size 20M;
+
   # Заметка: Должен совпадать с префиксом заданным при конфигурации thin
   #          или / если никакого префикса не задано
   location / {
